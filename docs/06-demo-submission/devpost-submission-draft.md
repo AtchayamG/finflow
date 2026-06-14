@@ -50,7 +50,7 @@ and mock providers while Labs access is pending.
 - Test suite
 
 ## Links
-- GitHub: TODO
+- GitHub: https://github.com/AtchayamG/finflow
 - Demo video: TODO
 - Presentation deck: TODO
 - UiPath proof: BLOCKED pending Labs access

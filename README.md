@@ -3,6 +3,8 @@
 FinFlow is a production-oriented hackathon MVP for UiPath AgentHack Track 1:
 UiPath Maestro Case.
 
+Public repo: https://github.com/AtchayamG/finflow
+
 It demonstrates an agentic loan-processing case workflow with:
 
 - a FastAPI backend,
