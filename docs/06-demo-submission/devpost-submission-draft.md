@@ -51,6 +51,7 @@ and mock providers while Labs access is pending.
 
 ## Links
 - GitHub: https://github.com/AtchayamG/finflow
+- Devpost draft: https://devpost.com/submit-to/29624-uipath-agenthack/manage/submissions/1051319-finflow/project_details/edit
 - Demo video: TODO
 - Presentation deck: TODO
 - UiPath proof: BLOCKED pending Labs access

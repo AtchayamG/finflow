@@ -5,7 +5,8 @@ Use this checklist before any coding claim, public claim, or Devpost submit.
 | Requirement | Evidence | Status | Owner | Verification |
 |---|---|---|---|---|
 | User eligible by age, residence, sanctions, employment, and conflicts | User confirmation plus official rules link | BLOCKED | User | Confirm before Devpost registration |
-| Devpost registration | Devpost registered state or confirmation page | BLOCKED | Codex/User | Browser registration form currently paused |
+| Devpost registration | Devpost manager page shows "Thanks for registering!" | PASS | Codex/User | Completed 2026-06-14 after user confirmed eligibility and terms |
+| Devpost project draft | Draft `1051319-finflow` | PASS | Codex | Project overview saved as FinFlow, 2/5 steps done |
 | UiPath Labs access requested | Access form confirmation or email | TODO | User/Codex | Submit form after registration details are confirmed |
 | UiPath Labs access received | Email or Automation Cloud tenant dashboard | TODO | User/Codex | Login and screenshot dashboard, no secrets |
 | Maestro Case available | Automation Cloud Labs screen or docs | TODO | Codex | Manual check in tenant |
@@ -23,13 +24,13 @@ Use this checklist before any coding claim, public claim, or Devpost submit.
 
 ## Current Browser Finding
 
-As of 2026-06-14, Devpost registration page is open for UiPath AgentHack under account `atchayamganesh`. The page asks for:
+As of 2026-06-14, Devpost registration is complete under account `atchayamganesh`.
+The project draft is:
 
-- teammate status,
-- referral source,
-- free-text hackathon goal,
-- acknowledgement of eligibility requirements,
-- agreement to Official Rules and Devpost Terms of Service,
-- Register button.
+- Draft: `1051319-finflow`
+- Preview slug: `/software/finflow-e57qmy`
+- Saved overview: `FinFlow`
+- Status: draft, `2/5` steps done
 
-Codex stopped before selecting or submitting those acknowledgements.
+Remaining Devpost work includes project details, additional info, video, and final
+submission review.

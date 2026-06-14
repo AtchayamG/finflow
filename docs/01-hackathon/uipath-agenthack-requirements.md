@@ -13,10 +13,10 @@ Official source pages:
 | Item | Status | Owner | Evidence |
 |---|---|---|---|
 | Devpost account logged in | PASS | Codex | Browser shows `atchayamganesh` account menu |
-| Devpost hackathon registration | BLOCKED | User | Registration form asks for eligibility and rules/terms acknowledgements |
-| Eligibility confirmation | BLOCKED | User | User must confirm legal age, country/residence eligibility, and no conflict |
+| Devpost hackathon registration | PASS | User/Codex | Completed under account `atchayamganesh` |
+| Eligibility confirmation | PASS | User | User confirmed solo developer from India, age 37, not currently working in an organisation |
 | UiPath Labs access form | TODO | User/Codex | Required before Automation Cloud build; access may take 3 business days |
-| Project coding start | BLOCKED | Codex | User instructed no coding until explicit approval |
+| Project coding start | PASS | Codex | User approved start; local MVP and public repo created |
 
 ## Dates
 
