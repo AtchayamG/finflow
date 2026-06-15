@@ -52,7 +52,19 @@ is pending.
 
 ## Links
 - GitHub: https://github.com/AtchayamG/finflow
-- Devpost draft: https://devpost.com/submit-to/29624-uipath-agenthack/manage/submissions/1051319-finflow/project_details/edit
-- Demo video: TODO
-- Presentation deck: TODO
+- Devpost draft: https://devpost.com/submit-to/29624-uipath-agenthack/manage/submissions/1051319-finflow/finalization
+- Preview: https://devpost.com/software/finflow-e57qmy
+- Demo video: https://youtu.be/NtKwIzjGJ3E
+- Presentation deck: https://github.com/AtchayamG/finflow/raw/main/assets/submission/finflow-pitch-deck.pdf
 - UiPath proof: BLOCKED pending Labs access
+
+## Devpost Status 2026-06-15
+
+Codex filled and saved the Project details and Additional info pages, uploaded
+the submission gallery images from `assets/submission/`, published the demo
+video on YouTube, and reached the final Submit page.
+
+Final submit is intentionally not clicked yet. The final Devpost reminder says
+the UiPath Platform must be the orchestration layer, and the current evidence
+still shows only a simulated UiPath client plus import-ready artifacts. Submit
+only after live UiPath Automation Cloud/Labs execution proof is available.
