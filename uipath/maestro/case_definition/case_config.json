@@ -1,0 +1,27 @@
+{
+  "caseName": "FinFlow Loan Case",
+  "track": "UiPath AgentHack 2026 Track 1 - Maestro Case",
+  "version": "0.2.0",
+  "providerMode": "simulated-uipath-client",
+  "stages": [
+    { "id": "intake", "label": "Application Intake", "owner": "backend" },
+    { "id": "document_review", "label": "Document Review", "owner": "Action Center" },
+    { "id": "verification", "label": "Document Verification", "owner": "DocValidatorRPA" },
+    { "id": "credit", "label": "Credit Assessment", "owner": "CreditSage" },
+    { "id": "compliance", "label": "Compliance", "owner": "ComplianceGuard" },
+    { "id": "decision", "label": "Final Decision", "owner": "DecisionPilot + Officer" },
+    { "id": "exception", "label": "Exception Handling", "owner": "ExceptionHandler" },
+    { "id": "closed", "label": "Closed", "owner": "Audit" }
+  ],
+  "humanGates": [
+    { "stage": "document_review", "form": "doc_review_form.json" },
+    { "stage": "decision", "form": "decision_form.json" }
+  ],
+  "callbacks": {
+    "documind": "/webhooks/documind",
+    "creditsage": "/webhooks/creditsage",
+    "complianceguard": "/webhooks/complianceguard",
+    "decisionpilot": "/webhooks/decisionpilot",
+    "actionCenter": "/webhooks/action-center"
+  }
+}

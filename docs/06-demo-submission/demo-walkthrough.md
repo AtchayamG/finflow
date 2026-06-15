@@ -6,14 +6,15 @@ Target duration: under 5 minutes.
 
 1. Open FinFlow and sign in.
 2. Show dashboard and explain the case pipeline.
-3. Click **Run E2E demo**.
-4. Backend creates a synthetic personal-loan case.
+3. Click **Run approve demo**.
+4. Backend creates a strong synthetic personal-loan case.
 5. Document extraction raises a low-confidence exception.
 6. Action Center-style document review approves corrected synthetic data.
 7. Verification, credit, compliance, and decision steps execute.
-8. Human final decision approves the loan.
-9. UI shows the backend case closed as APPROVED with an audit event chain.
-10. Close by showing the architecture and explaining which integrations are mock
+8. Human final decision approves the loan and closes the case.
+9. Click **Run weak demo** to show a risky case moving to refer/reject.
+10. Open cases, exceptions, analytics, and timeline to show live API state.
+11. Close by showing the architecture and explaining which integrations are mock
     providers versus pending UiPath Labs proof.
 
 ## Must Not Claim

@@ -31,10 +31,12 @@ describe('workflow view model', () => {
   it('keeps the required stage sequence explicit', () => {
     expect(stageSequence.map((stage) => stage.id)).toEqual([
       'intake',
+      'document_review',
       'verification',
       'credit',
       'compliance',
       'decision',
+      'exception',
       'closed',
     ])
   })

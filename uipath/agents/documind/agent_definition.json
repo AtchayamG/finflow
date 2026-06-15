@@ -1,0 +1,16 @@
+{
+  "agentName": "DocuMind",
+  "type": "Agent Builder",
+  "purpose": "Extract and validate synthetic loan documents.",
+  "inputModel": "DocuMindInput",
+  "outputModel": "DocuMindOutput",
+  "skills": ["document-classification", "field-extraction", "confidence-checking"],
+  "callback": "/webhooks/documind",
+  "timeoutSeconds": 120,
+  "providerMode": "mock-provider-compatible",
+  "guardrails": [
+    "Use synthetic document placeholders only.",
+    "Raise low_confidence_extraction below 0.8 confidence.",
+    "Do not store secrets or real identity documents."
+  ]
+}

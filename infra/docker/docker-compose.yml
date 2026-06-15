@@ -1,0 +1,27 @@
+services:
+  api:
+    build:
+      context: ../..
+      dockerfile: infra/docker/backend.Dockerfile
+    environment:
+      FINFLOW_PROVIDER_MODE: MOCK
+      FINFLOW_SQLITE_PATH: /data/finflow.sqlite3
+      FINFLOW_MOCK_BYPASS_WEBHOOK_AUTH: "true"
+    ports:
+      - "8781:8781"
+    volumes:
+      - finflow-data:/data
+
+  web:
+    build:
+      context: ../..
+      dockerfile: infra/docker/web.Dockerfile
+      args:
+        VITE_API_URL: http://127.0.0.1:8781
+    ports:
+      - "4174:80"
+    depends_on:
+      - api
+
+volumes:
+  finflow-data:

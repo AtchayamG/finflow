@@ -1,0 +1,36 @@
+name: FinFlow CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.12.0"
+          cache: npm
+          cache-dependency-path: apps/web/package-lock.json
+      - name: Backend dependencies
+        run: pip install -r services/api/requirements.txt
+      - name: Backend tests
+        working-directory: services/api
+        run: python -m pytest -q
+      - name: Frontend dependencies
+        working-directory: apps/web
+        run: npm ci
+      - name: Frontend tests
+        working-directory: apps/web
+        run: npm run test
+      - name: Frontend lint
+        working-directory: apps/web
+        run: npm run lint
+      - name: Frontend build
+        working-directory: apps/web
+        run: npm run build

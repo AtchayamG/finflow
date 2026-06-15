@@ -1,0 +1,25 @@
+{
+  "formName": "FinFlow Loan Decision",
+  "taskType": "final_decision",
+  "payloadModel": "LoanDecisionTaskPayload",
+  "fields": [
+    { "id": "case_id", "label": "Case ID", "type": "text", "readonly": true },
+    { "id": "applicant_name", "label": "Applicant", "type": "text", "readonly": true },
+    { "id": "loan_amount", "label": "Loan Amount", "type": "currency", "readonly": true },
+    { "id": "credit_score", "label": "Mock Credit Score", "type": "number", "readonly": true },
+    { "id": "risk_band", "label": "Risk Band", "type": "badge", "readonly": true },
+    { "id": "compliance_passed", "label": "Compliance Passed", "type": "boolean", "readonly": true },
+    { "id": "compliance_flags", "label": "Compliance Flags", "type": "list", "readonly": true },
+    { "id": "ai_recommendation", "label": "AI Recommendation", "type": "badge", "readonly": true },
+    { "id": "ai_confidence", "label": "AI Confidence", "type": "percentage", "readonly": true },
+    { "id": "executive_summary", "label": "Executive Summary", "type": "textarea", "readonly": true },
+    { "id": "detailed_rationale", "label": "Detailed Rationale", "type": "textarea", "readonly": true },
+    { "id": "approved_amount", "label": "Approved Amount", "type": "currency" },
+    { "id": "officer_notes", "label": "Officer Notes", "type": "textarea", "required": true }
+  ],
+  "actions": [
+    { "id": "APPROVE", "label": "Approve", "style": "primary" },
+    { "id": "REJECT", "label": "Reject", "style": "danger" },
+    { "id": "REFER_TO_CREDIT_COMMITTEE", "label": "Refer", "style": "secondary" }
+  ]
+}

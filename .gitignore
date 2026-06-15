@@ -6,6 +6,8 @@ dist/
 __pycache__/
 .pytest_cache/
 .venv/
+.playwright-cli/
 *.pyc
 *.log
+services/api/data/
 Thumbs.db

@@ -30,8 +30,9 @@ Planned / pending verification:
 - UiPath Action Center for document review and final decision.
 - UiPath Orchestrator/RPA boundary for document verification.
 
-Current local implementation includes a simulated UiPath-ready backend boundary
-and mock providers while Labs access is pending.
+Current local implementation includes a simulated UiPath client, import-ready
+Maestro/Action Center/Agent Builder specs, and mock providers while Labs access
+is pending.
 
 ## Built With
 - FastAPI
@@ -42,12 +43,12 @@ and mock providers while Labs access is pending.
 
 ## What Works Locally
 - Backend E2E workflow
-- Frontend E2E demo trigger
+- Frontend wired to cases, events, exceptions, analytics, document review, and decisions
 - Document exception and human-review callback
-- Final human approval
-- Event history
+- Strong approve path and weak refer/reject paths
+- SQLite event history and audit trail
 - Dark/light UI
-- Test suite
+- Test suite, Docker compose, and GitHub Actions CI definition
 
 ## Links
 - GitHub: https://github.com/AtchayamG/finflow

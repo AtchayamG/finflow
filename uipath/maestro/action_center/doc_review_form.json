@@ -1,0 +1,20 @@
+{
+  "formName": "FinFlow Document Review",
+  "taskType": "document_review",
+  "payloadModel": "DocReviewTaskPayload",
+  "fields": [
+    { "id": "case_id", "label": "Case ID", "type": "text", "readonly": true },
+    { "id": "applicant_name", "label": "Applicant", "type": "text", "readonly": true },
+    { "id": "loan_type", "label": "Loan Type", "type": "text", "readonly": true },
+    { "id": "loan_amount", "label": "Loan Amount", "type": "currency", "readonly": true },
+    { "id": "flagged_documents", "label": "Flagged Documents", "type": "table" },
+    { "id": "extracted_summary", "label": "Extracted Summary", "type": "key_value" },
+    { "id": "exception_description", "label": "Exception", "type": "textarea", "readonly": true },
+    { "id": "reviewer_notes", "label": "Reviewer Notes", "type": "textarea", "required": true }
+  ],
+  "actions": [
+    { "id": "APPROVE_DOCS", "label": "Approve Documents", "style": "primary" },
+    { "id": "REQUEST_RESUBMIT", "label": "Request Resubmission", "style": "secondary" },
+    { "id": "ESCALATE", "label": "Escalate", "style": "danger" }
+  ]
+}

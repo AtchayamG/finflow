@@ -12,9 +12,19 @@ Stage = Literal[
     "credit",
     "compliance",
     "decision",
+    "exception",
     "closed",
 ]
-Status = Literal["open", "in_progress", "exception", "approved", "rejected", "referred"]
+Status = Literal[
+    "open",
+    "in_progress",
+    "awaiting_human",
+    "exception",
+    "approved",
+    "rejected",
+    "referred",
+    "closed",
+]
 
 
 def utc_now() -> str:
@@ -27,6 +37,11 @@ class CreateCaseRequest(BaseModel):
     loan_amount: float = Field(gt=0)
     tenure_months: int = Field(ge=6, le=360)
     monthly_income: float = Field(gt=0)
+    applicant_id: str | None = None
+    pan_number: str = "SYNTHPAN1234"
+    aadhaar_last4: str = "1234"
+    nationality: str = "IN"
+    existing_emi: float = 8000
 
 
 class ActionCenterDecision(BaseModel):
@@ -35,6 +50,7 @@ class ActionCenterDecision(BaseModel):
     decision: str
     reviewer: str
     reason: str = Field(min_length=3)
+    approved_amount: float | None = None
 
 
 class CaseEvent(BaseModel):
@@ -62,20 +78,38 @@ class ExceptionRecord(BaseModel):
 
 class LoanCase(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid4()))
+    applicant_id: str = Field(default_factory=lambda: f"APP-{uuid4().hex[:8].upper()}")
     applicant_name: str
     loan_type: str
     loan_amount: float
     tenure_months: int
     monthly_income: float
+    pan_number: str = "SYNTHPAN1234"
+    aadhaar_last4: str = "1234"
+    nationality: str = "IN"
     current_stage: Stage = "intake"
     case_status: Status = "open"
     provider_mode: str = "MOCK"
     existing_emi: float = 8000
     proposed_emi: float = 16000
     bureau_score: int | None = None
+    documents: list[dict] = Field(default_factory=list)
     credit: dict | None = None
     compliance: dict | None = None
     decision: dict | None = None
+    action_tasks: list[dict] = Field(default_factory=list)
     exceptions: list[ExceptionRecord] = Field(default_factory=list)
     created_at: str = Field(default_factory=utc_now)
     updated_at: str = Field(default_factory=utc_now)
+
+
+class AnalyticsSummary(BaseModel):
+    total_cases: int
+    in_progress: int
+    awaiting_human: int
+    exceptions: int
+    approved: int
+    rejected: int
+    referred: int
+    average_risk_score: float
+    stage_counts: dict[str, int]

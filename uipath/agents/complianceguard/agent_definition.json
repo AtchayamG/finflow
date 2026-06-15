@@ -1,0 +1,16 @@
+{
+  "agentName": "ComplianceGuard",
+  "type": "Agent Builder",
+  "purpose": "Run mock AML, KYC, and RBI policy checks for loan cases.",
+  "inputModel": "ComplianceGuardInput",
+  "outputModel": "ComplianceGuardOutput",
+  "skills": ["aml-screening", "kyc-consistency", "rbi-policy-check"],
+  "callback": "/webhooks/complianceguard",
+  "timeoutSeconds": 120,
+  "providerMode": "mock-provider-compatible",
+  "guardrails": [
+    "Use mock compliance rules only until live providers are approved.",
+    "Flag watchlist keywords as CRITICAL in demo mode.",
+    "Do not claim live AML, Aadhaar, PAN, or sanctions verification."
+  ]
+}

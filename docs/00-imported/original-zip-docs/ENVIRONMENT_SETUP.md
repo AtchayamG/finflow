@@ -11,14 +11,14 @@
 UIPATH_ACCOUNT_NAME=your_account_name
 UIPATH_TENANT_NAME=FinFlowTenant
 UIPATH_CLIENT_ID=your_client_id
-UIPATH_CLIENT_SECRET=your_client_secret
+UIPATH_CLIENT_SECRET=
 UIPATH_ORCHESTRATOR_URL=https://cloud.uipath.com/{account}/{tenant}
 UIPATH_FOLDER_NAME=FinFlow_Production
 
 # ================================================================
 # LLM (Claude via Anthropic API)
 # ================================================================
-ANTHROPIC_API_KEY=<set-in-local-env-only>
+ANTHROPIC_API_KEY=
 CLAUDE_MODEL=claude-sonnet-4-6
 CLAUDE_MAX_TOKENS=2000
 
